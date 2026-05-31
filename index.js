@@ -359,6 +359,6 @@ app.post("/check", async (req, res) => {
   });
 });
 
-app.listen(CONFIG.PORT, () => {
-  console.log("Running: http://localhost:" + CONFIG.PORT);
+app.listen(process.env.PORT || CONFIG.PORT, () => {
+  console.log("Running: http://localhost:" + (process.env.PORT || CONFIG.PORT));
 });
